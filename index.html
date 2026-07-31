@@ -10,8 +10,8 @@
       margin: 0;
       padding: 0;
       font-family: "Inter", sans-serif;
-      background: linear-gradient(180deg, #dff1ff, #f3e8ff, #ffeef7);
-      color: #333;
+      background: #1f1f1f;
+      color: #e5e5e5;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -21,69 +21,65 @@
     }
 
     .container {
-      background: #ffffffdd;
-      backdrop-filter: blur(10px);
-      padding: 40px 30px;
-      border-radius: 24px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      background: #2a2a2a;
+      padding: 40px 32px;
+      border-radius: 20px;
       max-width: 420px;
       width: 100%;
       text-align: center;
       box-sizing: border-box;
-      border: 1px solid rgba(255,255,255,0.6);
+      border: 1px solid #3a3a3a;
     }
 
     .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 24px;
+      width: 110px;
+      height: 110px;
+      border-radius: 16px;
       object-fit: cover;
       margin-bottom: 20px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 26px;
       margin: 0;
-      margin-bottom: 6px;
-      color: #444;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: #fff;
     }
 
     p {
       margin: 0;
-      margin-bottom: 30px;
-      color: #666;
+      margin-bottom: 28px;
+      color: #cfcfcf;
       font-size: 15px;
     }
 
     .link-box {
-      margin-bottom: 22px;
+      margin-bottom: 26px;
+      text-align: left;
     }
 
     .link {
       display: block;
       width: 100%;
-      background: #5aa8ff;
+      background: #2563eb;
       color: white;
-      padding: 16px;
-      border-radius: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 16px;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-      box-shadow: 0 4px 12px rgba(90, 168, 255, 0.25);
-      box-sizing: border-box;
+      font-size: 15px;
+      transition: background 0.15s ease;
     }
 
     .link:hover {
-      transform: scale(1.03);
-      opacity: 0.9;
+      background: #1e4fc7;
     }
 
     .description {
-      margin-top: 6px;
+      margin-top: 8px;
       font-size: 14px;
-      color: #555;
+      color: #cfcfcf;
       opacity: 0.9;
     }
 
@@ -93,7 +89,7 @@
     }
 
     .privacy-link a {
-      color: #4a4a4a;
+      color: #9ea3aa;
       text-decoration: none;
       font-weight: 500;
     }
@@ -105,20 +101,20 @@
     footer {
       margin-top: 30px;
       font-size: 13px;
-      color: #999;
+      color: #888;
     }
 
     @media (max-width: 480px) {
       .container {
-        padding: 30px 20px;
+        padding: 28px 20px;
       }
       .logo {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
       .link {
-        font-size: 15px;
-        padding: 14px;
+        font-size: 14px;
+        padding: 12px;
       }
     }
   </style>
@@ -130,19 +126,27 @@
     <img src="logo.png" alt="Logo banquCode" class="logo">
 
     <h1>banquCode Apps</h1>
-    <p>Desarrollador indie de apps minimalistas</p>
+    <p>Indie developer de apps minimalistas y enfocadas en la experiencia.</p>
 
     <div class="link-box">
-      <a class="link" href="https://tu-enlace-1.com">Recordables App</a>
-      <div class="description">Tu diario minimalista, sin conexión y sin distracciones.</div>
+      <a class="link" href="https://tu-enlace-1.com">TwelReserve — Gestión de citas para profesionales independientes</a>
+      <div class="description">Gestión de citas enfocadas en negocios con un solo profesional</div>
 
-      <!-- Enlace a la política de privacidad -->
+      <!-- <div class="privacy-link">
+        <a href="recordablesapp-privacy.html">Política de privacidad</a>
+      </div> -->
+    </div>
+
+    <!-- <div class="link-box">
+      <a class="link" href="https://tu-enlace-1.com">Recordables App</a>
+      <div class="description">Diario minimalista, offline y sin distracciones.</div>
+
       <div class="privacy-link">
         <a href="recordablesapp-privacy.html">Política de privacidad</a>
       </div>
-    </div>
+    </div> -->
 
-    <footer>Made with love by Banqucode</footer>
+    <footer>banquCode — Indie Software</footer>
   </div>
 
 </body>
