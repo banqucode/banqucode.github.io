@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Recorte con forma de corazón -->
+    <clipPath id="heart-clip">
+      <path d="M256 460 C120 350 40 260 40 170 C40 100 95 45 165 45 C208 45 242 66 256 92 C270 66 304 45 347 45 C417 45 472 100 472 170 C472 260 392 350 256 460 Z" />
+    </clipPath>
+
+    <!-- Brillo curvo superior izquierdo -->
+    <linearGradient id="gloss" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grupo con forma de corazón -->
+  <g clip-path="url(#heart-clip)">
+    <!-- Franjas diagonales del arcoíris basadas en el logo -->
+    <rect x="-100" y="-100" width="700" height="700" fill="#a855f7" />
+    <path d="M -50 600 L 600 -50 L 520 -50 L -50 520 Z" fill="#3b82f6" />
+    <path d="M -50 520 L 520 -50 L 440 -50 L -50 440 Z" fill="#06b6d4" />
+    <path d="M -50 440 L 440 -50 L 360 -50 L -50 360 Z" fill="#22c55e" />
+    <path d="M -50 360 L 360 -50 L 280 -50 L -50 280 Z" fill="#eab308" />
+    <path d="M -50 280 L 280 -50 L 200 -50 L -50 200 Z" fill="#f97316" />
+    <path d="M -50 200 L 200 -50 L -50 -50 Z" fill="#ef4444" />
+
+    <!-- Reflejo curvo brillante (Efecto Glass/Glaze) -->
+    <path d="M 60 160 C 60 90 110 55 165 55 C 195 55 220 68 235 88 C 210 120 150 160 60 160 Z" fill="url(#gloss)" />
+  </g>
+
+  <!-- Destellos / Chispas blancas (Sparkles) -->
+  <g fill="#ffffff">
+    <!-- Destello principal superior derecho -->
+    <path d="M 360 150 Q 360 175 385 175 Q 360 175 360 200 Q 360 175 335 175 Q 360 175 360 150 Z" />
+    <!-- Destello secundario pequeño -->
+    <path d="M 315 200 Q 315 215 330 215 Q 315 215 315 230 Q 315 215 300 215 Q 315 215 315 200 Z" />
+  </g>
+</svg>

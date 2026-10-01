@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwelReserve — La agenda minimalista para negocios de un solo profesional</title>
+    <link rel="icon" type="image/svg+xml" href="img/twelreserve/favicon-twelreserve.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            100: '#e0e7ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-brand-500/20">
+                        T
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-xl tracking-tight text-slate-900 block leading-none">TwelReserve</span>
+                        <span class="text-[10px] uppercase tracking-wider text-slate-500 font-medium">Solo Profesional</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                    <a href="#problema" class="hover:text-brand-600 transition">El Problema</a>
+                    <a href="#caracteristicas" class="hover:text-brand-600 transition">Características</a>
+                    <a href="#capturas" class="hover:text-brand-600 transition">Capturas</a>
+                    <a href="#precio" class="hover:text-brand-600 transition">Precio</a>
+                </div>
+                <div>
+                    <a href="#registro" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-2.5 rounded-xl transition shadow-lg shadow-brand-600/30 text-sm inline-flex items-center gap-2">
+                        <span>Empezar Gratis</span>
+                        <i class="fa-solid font-xs fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-brand-50/50 via-white to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800 border border-brand-200 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                    Micro-SaaS Minimalista para un Solo Profesional
+                </span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                    Deja de coger el teléfono mientras trabajas. <span class="text-brand-600 underline decoration-brand-500/30">Tu agenda debe llenarse sola.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed font-normal">
+                    Sin opciones complejas. Una app web diseñada exclusivamente para gestionar tus citas sin interrupciones, evitar perder clientes y avisar por WhatsApp automáticamente.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#registro" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition shadow-xl shadow-brand-600/30 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Probar TwelReserve Ahora</span>
+                    </a>
+                    <a href="#capturas" class="bg-white hover:bg-slate-100 text-slate-700 font-semibold px-8 py-4 rounded-xl text-lg border border-slate-300 transition flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>Ver Pantallas</span>
+                    </a>
+                </div>
+                
+                <!-- Badge Highlights -->
+                <div class="pt-6 border-t border-slate-200/60 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-check"></i></div>
+                        <span class="text-xs font-semibold text-slate-700">Multi-dispositivo (PWA Web)</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-check"></i></div>
+                        <span class="text-xs font-semibold text-slate-700">Notificaciones de reserva</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-check"></i></div>
+                        <span class="text-xs font-semibold text-slate-700">Avisos por WhatsApp</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-check"></i></div>
+                        <span class="text-xs font-semibold text-slate-700">Ajuste de ausencias fácil</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Dolor (Pain Points) -->
+    <section id="problema" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">Donde más duele</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    ¿Cuánto dinero pierde tu negocio cada vez que paras a contestar un mensaje?
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/60 hover:border-brand-500/50 transition">
+                    <div class="w-12 h-12 bg-red-500/10 text-red-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-phone-slash"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Interrupciones constantes</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Tener que dejar las tijeras, el masaje o el entrenamiento para coger el teléfono molesta al cliente que está pagando y te hace perder el ritmo de trabajo.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/60 hover:border-brand-500/50 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-user-xmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Clientes que se van a la competencia</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Si tardas 2 horas en responder un WhatsApp porque estás trabajando, el cliente no esperará: buscará a otro profesional que le dé cita al instante.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/60 hover:border-brand-500/50 transition">
+                    <div class="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Programas inflados y difíciles</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Software complejos con cientos de pestañas que no necesitas. TwelReserve hace **una sola cosa** y la hace con total excelencia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características principales -->
+    <section id="caracteristicas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Diseñado para la simplicidad</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Todo lo que necesitas para gestionar tu día a día en un solo lugar
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-xl transition">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Instalable en cualquier dispositivo</h3>
+                    <p class="text-slate-600 text-sm">Funciona en móviles, tablets y ordenadores sin ocupar espacio. App web progresiva ligera y veloz.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-xl transition">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Notificaciones Push</h3>
+                    <p class="text-slate-600 text-sm">Recibe un aviso al instante cada vez que un cliente reserve o cancele una cita desde el enlace público.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-xl transition">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center mb-4">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Avisos por WhatsApp configurables</h3>
+                    <p class="text-slate-600 text-sm">Envía mensajes automáticos cuando agendas una cita manual, reagendas o cancelas (con opción de desactivar).</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-xl transition">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center mb-4">
+                        <i class="fa-regular fa-calendar-minus"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Gestión de Ausencias</h3>
+                    <p class="text-slate-600 text-sm">¿Tienes médico o descanso personal? Bloquea tramos horarios específicos para evitar reservas indebidas.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-xl transition">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Ficha completa de clientes</h3>
+                    <p class="text-slate-600 text-sm">Conserva toda la información (WhatsApp, teléfono y correo) con accesos rápidos para llamar o chatear.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-xl transition">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Control de Tiempos y Servicios</h3>
+                    <p class="text-slate-600 text-sm">Ajusta duraciones, descansos entre citas, precios y horarios semanales según tu disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Capturas / Funcionamiento -->
+    <section id="capturas" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Panel de control real</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Descubre lo limpio e intuitivo que es TwelReserve
+                </p>
+            </div>
+
+            <!-- Grid de Capturas explicadas -->
+            <div class="space-y-16">
+
+                <!-- Feature Block 1: Panel de reservas -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <div>
+                        <span class="text-xs font-bold tracking-wider text-brand-600 uppercase">Panel Principal</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-4">Visualiza tus citas semana a semana</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Controla de un vistazo todas tus citas asignadas. Cambia entre días de la semana y gestiona la asistencia de tus clientes sin perderte en menús infinitos.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Vista directa por días y contador de citas</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Cancelación y reagendamiento con 1 solo clic</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+                        <img src="img/twelreserve/panel-cita.png" alt="Panel de reservas" class="w-full h-auto cursor-pointer hover:opacity-95 transition" onclick="openModal(this)">
+                    </div>
+                </div>
+
+                <!-- Feature Block 2: Cita manual & WhatsApp -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm md:flex-row-reverse">
+                    <div class="md:order-2">
+                        <span class="text-xs font-bold tracking-wider text-brand-600 uppercase">Citas Manuales e Integración</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-4">Programa citas manuales y notifica por WhatsApp</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Si un cliente te pide cita en persona o por teléfono, búscalo rápidamente e insértalo en tu agenda. Marca la casilla <strong class="text-slate-800">"Informar por WhatsApp"</strong> para avisarle de inmediato a su móvil.
+                        </p>
+                        <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-emerald-900 text-sm flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-xl mt-0.5"></i>
+                            <div>
+                                <strong>Avisos automáticos:</strong> Notifica la creación, reagendamiento o cancelación de citas con un solo clic.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:order-1 rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+                        <img src="img/twelreserve/anadir-cita-manual.png" alt="Programar una cita manual" class="w-full h-auto cursor-pointer hover:opacity-95 transition" onclick="openModal(this)">
+                    </div>
+                </div>
+
+                <!-- Feature Block 3: Clientes y Horarios (2 columnas) -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Clientes -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider text-brand-600 uppercase">Gestión de Clientes</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Toda la información a mano</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Encuentra a cualquier cliente por nombre, teléfono o correo. Accede directamente a botones para <u>Llamar</u>, enviar <u>Correo</u> o iniciar un chat de <u>WhatsApp</u>.
+                            </p>
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-slate-200 mt-4 shadow-md">
+                            <img src="img/twelreserve/clientes.png" alt="Gestión de clientes" class="w-full h-auto cursor-pointer hover:opacity-95 transition" onclick="openModal(this)">
+                        </div>
+                    </div>
+
+                    <!-- Horarios -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider text-brand-600 uppercase">Ajuste de Horarios</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Tiempos y Tiempos de descanso</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Configura tiempos de descanso entre servicios, tolerancia al cierre y la activación de notificaciones de confirmación, cancelación y reagendamiento.
+                            </p>
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-slate-200 mt-4 shadow-md">
+                            <img src="img/twelreserve/horarios.png" alt="Horarios y disponibilidad" class="w-full h-auto cursor-pointer hover:opacity-95 transition" onclick="openModal(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Block 4: Ausencias & Servicios -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Programar ausencia -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider text-brand-600 uppercase">Bloqueos de Agenda</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Programar Ausencias sencillas</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Selecciona el día, las horas en las que no estarás disponible y el motivo. Nadie podrá reservarte en ese tramo de tiempo.
+                            </p>
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-slate-200 mt-4 shadow-md">
+                            <img src="img/twelreserve/programar-ausencia.png" alt="Programar ausencia" class="w-full h-auto cursor-pointer hover:opacity-95 transition" onclick="openModal(this)">
+                        </div>
+                    </div>
+
+                    <!-- Servicios & Perfil -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider text-brand-600 uppercase">Servicios y Negocio</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Personalización total</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Define tus servicios con precio y duración exacta. Actualiza el perfil de tu negocio, descripción y datos de contacto de forma inmediata.
+                            </p>
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-slate-200 mt-4 shadow-md">
+                            <img src="img/twelreserve/servicios.png" alt="Configuración de Servicios" class="w-full h-auto cursor-pointer hover:opacity-95 transition" onclick="openModal(this)">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Pasos / Onboarding -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Puesta en marcha rápida</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Empieza a recibir citas automáticas en 5 minutos
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Paso 1 -->
+                <div class="relative bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center mb-4 text-lg">1</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Registro e Inicio</h3>
+                    <p class="text-slate-600 text-sm">Crea tu cuenta de manera inmediata para acceder a tu panel de administración.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="relative bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center mb-4 text-lg">2</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Configura tu Negocio</h3>
+                    <p class="text-slate-600 text-sm">Crea tu perfil desde cero: añade tu logo, nombre, enlace público, horarios y servicios.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="relative bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center mb-4 text-lg">3</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Comparte tu Enlace</h3>
+                    <p class="text-slate-600 text-sm">Añade tu link en Instagram, Google Maps o WhatsApp. Tus clientes reservarán solos.</p>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="relative bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center mb-4 text-lg">4</div>
+                    <h3 class="font-bold text-slate-900 mb-2">¡Desconecta!</h3>
+                    <p class="text-slate-600 text-sm">Recibe notificaciones automáticas cada vez que alguien reserve, reagende o cancele.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Vista Previa de la Página Pública (Enfocada en el Dolor) -->
+    <section class="py-20 bg-gradient-to-b from-slate-50 via-brand-50/30 to-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-brand-100 text-brand-800 border border-brand-200 mb-4 uppercase tracking-wider">
+                    <i class="fa-solid fa-link"></i> Tu Enlace Personalizado
+                </span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+                    Tu cliente reserva en 30 segundos. Sin llamadas, sin esperar respuestas.
+                </h2>
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                    Podrás configurar la página pública de tu negocio con tu propio enlace personalizado (por ejemplo, <span class="font-mono bg-white px-2 py-0.5 rounded border border-slate-300 text-brand-600 font-semibold">twelreserve.app/reserve/tu-negocio</span>) para ponerlo en tu bio de Instagram, WhatsApp Business o Google Maps.
+                </p>
+            </div>
+
+            <!-- Demostración / Vista Previa -->
+            <div class="relative max-w-4xl mx-auto mb-12">
+                <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-600 to-indigo-600 rounded-3xl blur opacity-30"></div>
+                <div class="relative bg-white p-3 sm:p-5 rounded-2xl shadow-2xl border border-slate-200/90">
+                    <div class="flex items-center gap-2 px-3 py-2 border-b border-slate-100 mb-3 bg-slate-50 rounded-t-xl">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                        <span class="text-xs text-slate-500 ml-2 font-mono">twelreserve.app/reserve/tu-negocio</span>
+                    </div>
+                    <img src="img/twelreserve/pagina-publica.png" alt="Ejemplo de página pública de reserva para tu negocio" class="rounded-xl w-full object-cover shadow-inner cursor-pointer hover:opacity-95 transition" onclick="openModal(this)">
+                </div>
+            </div>
+
+            <!-- Puntos de dolor resueltos en la página pública -->
+            <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-3 font-bold text-lg">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-1 text-sm">Reserva Ultra-Rápida</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">El cliente elige el servicio, el día y la hora disponible en segundos, sin dar vueltas.</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mx-auto mb-3 font-bold text-lg">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-1 text-sm">Sin crear cuenta ni contraseñas</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Cero barreras. Tus clientes no necesitan descargarse ninguna app ni recordar datos de acceso.</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mx-auto mb-3 font-bold text-lg">
+                        <i class="fa-solid fa-ban"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-1 text-sm">Evita la fuga de clientes</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Si no puedes contestar al momento, el enlace reserva por ti a cualquier hora del día o de la noche.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Precios -->
+    <section id="precio" class="py-16 sm:py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4 uppercase tracking-wider">
+                    <i class="fa-solid fa-flask"></i> Fase Beta Abierta
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+                    100% Gratuito durante la Beta
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Sin trucos, sin comisiones ocultas y sin requerir datos bancarios.
+                </p>
+            </div>
+
+            <!-- Caja de precio reducida para visibilidad completa en móviles -->
+            <div class="max-w-sm mx-auto">
+                <div class="bg-slate-800 rounded-3xl border-2 border-brand-500 p-5 sm:p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-600 text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-xl tracking-wider">
+                        Acceso Total
+                    </div>
+
+                    <div class="mb-4 sm:mb-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">Plan Beta Público</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm">Disfruta de la plataforma completa mientras perfeccionamos el servicio contigo.</p>
+                    </div>
+
+                    <div class="flex items-baseline gap-2 mb-6 pb-5 border-b border-slate-700">
+                        <span class="text-4xl sm:text-5xl font-black text-white">0€</span>
+                        <span class="text-slate-400 text-xs sm:text-sm font-medium">/ siempre en beta</span>
+                    </div>
+
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-300 mb-6">
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-400 text-sm"></i>
+                            <span>Acceso a <strong>todas las funciones</strong></span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-400 text-sm"></i>
+                            <span>Reservas y clientes ilimitados</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-400 text-sm"></i>
+                            <span>PWA instalable en iOS y Android</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-400 text-sm"></i>
+                            <span>Avisos por WhatsApp y Notificaciones</span>
+                        </li>
+                        <li class="flex items-center gap-2.5 text-slate-100 font-medium">
+                            <i class="fa-solid fa-credit-card-slash text-brand-400 text-sm"></i>
+                            <span><strong>Sin tarjeta de crédito</strong></span>
+                        </li>
+                    </ul>
+
+                    <a href="https://twelreserve.app/register" target="_blank" class="block w-full text-center bg-brand-600 hover:bg-brand-500 text-white font-bold py-3.5 rounded-xl shadow-lg transition text-sm sm:text-base">
+                        Crear Cuenta Beta Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Preguntas Frecuentes</h2>
+                <p class="text-3xl font-extrabold text-slate-900 tracking-tight">Resolvemos tus dudas</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">¿Es fácil de instalar en mi teléfono?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Sí. Es una App Web (PWA), lo que significa que puedes añadirla a la pantalla de inicio de tu móvil (iOS o Android) o tablet sin necesidad de descargarla desde App Store o Google Play.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">¿Cómo reciben mis clientes la confirmación por WhatsApp?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Cuando guardas una cita manual o cambias una reserva, puedes activar el envío de mensajes a WhatsApp. El cliente recibirá un mensaje con todos los datos de su cita al instante.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">¿Puedo bloquear horas sueltas para ir al médico o hacer recados?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Totalmente. La opción de <strong class="text-slate-800">"Programar ausencia"</strong> te permite bloquear un rango de horas específico de un día concreto sin alterar tu horario habitual de trabajo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="registro" class="py-20 bg-brand-600 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand-500/40 via-transparent to-transparent"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-black mb-6 tracking-tight">
+                Empieza hoy a ahorrar tiempo y evitar llamadas
+            </h2>
+            <p class="text-lg sm:text-xl text-brand-100 mb-10 max-w-2xl mx-auto">
+                Únete a los profesionales que han automatizado su agenda y disfrutan de un trabajo sin interrupciones.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://twelreserve.app/register" target="_blank" class="w-full sm:w-auto bg-white text-brand-700 hover:bg-brand-50 font-extrabold px-8 py-4 rounded-xl text-lg shadow-xl transition">
+                    Crear mi cuenta gratis
+                </a>
+            </div>
+            <p class="text-xs text-brand-200 mt-6"><i class="fa-solid fa-lock mr-1"></i> Configuración rápida en menos de 5 minutos</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-lg">
+                    T
+                </div>
+                <span class="font-bold text-white text-lg">TwelReserve</span>
+            </div>
+            <p class="text-xs text-slate-500">
+                &copy; 2026 TwelReserve. Agenda minimalista para negocios de un solo profesional.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox / Modal de Pantalla Completa para Imágenes -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeModal()">
+        <button onclick="closeModal()" class="absolute top-5 right-5 text-white/80 hover:text-white text-3xl focus:outline-none z-10 p-2">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="modalImage" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" src="" alt="Vista ampliada">
+    </div>
+
+    <script>
+        function openModal(imgElement) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imgElement.src;
+            modalImg.alt = imgElement.alt;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar modal al presionar la tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
